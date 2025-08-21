@@ -1,0 +1,81 @@
+INFO:     127.0.0.1:49378 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49381 - "GET /api/resources/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49384 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57249 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57249 - "GET /styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57249 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57253 - "GET /api/resources/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57250 - "GET /api/journal/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57249 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57249 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57293 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57306 - "POST /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57306 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58182 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58184 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58806 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58807 - "POST /api/eeg/predict/depression HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59242 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59242 - "GET /styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59243 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59242 - "GET /api/journal/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59243 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59242 - "GET /api/resources/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59244 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59258 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59341 - "POST /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59341 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59342 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59342 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59342 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59426 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59734 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59735 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59766 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60027 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60033 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60460 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60460 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60467 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60467 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60468 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60468 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60467 - "GET /api/journal/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60468 - "GET /api/resources/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60468 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60783 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60783 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60783 - "GET /styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60785 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60785 - "GET /api/journal/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60783 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60785 - "GET /api/resources/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60808 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60808 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60810 - "POST /api/eeg/predict/depression HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:60810 - "POST /api/eeg/predict/depression HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:60810 - "POST /api/eeg/predict/depression HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:61232 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60810 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60810 - "GET /styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:60810 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60810 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60810 - "GET /api/journal/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60810 - "GET /api/resources/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61371 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61371 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61372 - "POST /api/eeg/predict/depression HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:61372 - "POST /api/eeg/predict/severity HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:50189 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50247 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50247 - "GET /styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50248 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50255 - "GET /api/resources/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50248 - "GET /api/moods/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50247 - "GET /api/journal/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50274 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50274 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50288 - "POST /api/eeg/predict/depression HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:50288 - "GET /api/eeg/sample HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50288 - "GET /api/eeg/sample.csv HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51018 - "POST /api/eeg/predict/depression HTTP/1.1" 405 Method Not Allowed

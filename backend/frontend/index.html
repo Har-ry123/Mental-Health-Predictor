@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful Companion</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="app-header">
+        <h1>Mindful Companion</h1>
+        <p class="disclaimer">This app is not a replacement for professional care. If you are in crisis, contact local emergency services or a crisis hotline immediately.</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-button active" data-tab="chat">Chat</button>
+        <button class="tab-button" data-tab="mood">Mood</button>
+        <button class="tab-button" data-tab="journal">Journal</button>
+        <button class="tab-button" data-tab="resources">Resources</button>
+        <button class="tab-button" data-tab="eeg">EEG</button>
+    </nav>
+
+    <main>
+        <section id="tab-chat" class="tab active">
+            <div class="chat-container">
+                <div id="chat-history" class="chat-history"></div>
+                <div class="chat-input">
+                    <textarea id="chat-message" placeholder="What's on your mind?" rows="3"></textarea>
+                    <button id="send-chat">Send</button>
+                </div>
+                <div id="chat-suggestions" class="suggestions"></div>
+            </div>
+        </section>
+
+        <section id="tab-mood" class="tab">
+            <div class="card">
+                <h2>Track your mood</h2>
+                <div class="mood-form">
+                    <label for="mood-score">Score (1-10)</label>
+                    <input id="mood-score" type="number" min="1" max="10" value="5" />
+                    <label for="mood-note">Note (optional)</label>
+                    <input id="mood-note" type="text" placeholder="brief note" />
+                    <button id="save-mood">Save</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Mood trend</h3>
+                <canvas id="mood-chart" height="160"></canvas>
+            </div>
+            <div class="card">
+                <h3>Recent moods</h3>
+                <ul id="mood-list" class="list"></ul>
+            </div>
+        </section>
+
+        <section id="tab-journal" class="tab">
+            <div class="card">
+                <h2>New journal entry</h2>
+                <input id="journal-title" type="text" placeholder="Title" />
+                <textarea id="journal-content" rows="4" placeholder="Write freely..."></textarea>
+                <button id="add-journal">Add Entry</button>
+            </div>
+            <div class="card">
+                <h3>Entries</h3>
+                <ul id="journal-list" class="list"></ul>
+            </div>
+        </section>
+
+        <section id="tab-resources" class="tab">
+            <div class="card">
+                <h2>Crisis and support resources</h2>
+                <ul id="resources-list" class="list"></ul>
+            </div>
+        </section>
+
+        <section id="tab-eeg" class="tab">
+            <div class="sidebar">
+                <h3>Generate EEG Data</h3>
+                <button id="btn-sample-eeg" class="primary">Create Sample EEG CSV</button>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <h2>EEG Mental Health Prediction</h2>
+                    <p class="muted">Upload your EEG data (1024 features) to predict either Depression or Severity using a simple model.</p>
+                    <div class="segmented">
+                        <select id="eeg-target-select" class="seg" style="padding:10px 12px">
+                            <option value="depression" selected>Depression</option>
+                            <option value="severity">Severity</option>
+                            <option value="anxiety">Anxiety</option>
+                            <option value="stress">Stress</option>
+                            <option value="ptsd">PTSD</option>
+                            <option value="ocd">OCD</option>
+                            <option value="adhd">ADHD</option>
+                            <option value="burnout">Burnout</option>
+                            <option value="insomnia">Insomnia</option>
+                            <option value="wellbeing">Wellbeing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 id="eeg-title">Depression Prediction</h3>
+                    <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload CSV">
+                        <div>Drag and drop file here</div>
+                        <div class="muted">Limit 200MB per file • CSV</div>
+                    </div>
+                    <div class="actions">
+                        <input type="file" id="eeg-file" accept=".csv" style="display:none" />
+                        <button id="browse-eeg">Browse files</button>
+                    </div>
+                </div>
+                <div class="card" id="eeg-result" style="display:none"></div>
+                <div class="card" id="eeg-chart-card" style="display:none">
+                    <h3>Prediction Chart</h3>
+                    <canvas id="eeg-chart" height="160"></canvas>
+                </div>
+                <div class="card" id="eeg-batch-card" style="display:none">
+                    <h3>Batch Summary</h3>
+                    <div id="eeg-batch-summary" class="muted"></div>
+                    <div style="margin-top:10px">
+                        <input type="file" id="eeg-batch-file" accept=".csv" style="display:none" />
+                        <button id="browse-eeg-batch">Upload CSV for Batch</button>
+                    </div>
+                    <canvas id="eeg-batch-chart" height="160" style="margin-top:10px"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>Mindful Companion © 2025</span>
+    </footer>
+
+    <script src="/app.js"></script>
+    <script>
+        // Tab logic
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                btn.classList.add('active');
+                document.querySelector(`#tab-${btn.dataset.tab}`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
